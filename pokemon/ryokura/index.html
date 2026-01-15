@@ -2,42 +2,108 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryokura Character Cards</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+  
   <style>
     body { background: transparent; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: "Microsoft JhengHei", sans-serif; }
+    
     .swiper { width: 320px; height: 500px; border-radius: 20px; background: #ffffff; box-shadow: 0 10px 25px rgba(255, 128, 172, 0.2); }
-    .swiper-slide img { width: 100%; height: 70%; object-fit: contain; background: #FF80AC; border-radius: 20px 20px 0 0; }
-    .char-info { padding: 15px; height: 30%; background: #fff; border-radius: 0 0 20px 20px; }
+    
+    .swiper-slide { position: relative; cursor: zoom-in; }
+    
+    /* 圖片區域設定 */
+    .swiper-slide img { width: 100%; height: 70%; object-fit: contain; background: #FF80AC; border-radius: 20px 20px 0 0; display: block; }
+    
+    /* 角色資訊區設定 */
+    .char-info { padding: 15px; height: 30%; background: #fff; border-radius: 0 0 20px 20px; box-sizing: border-box; }
     .char-name { font-size: 1.2rem; font-weight: bold; color: #FF80AC; margin-bottom: 5px; }
     .char-detail { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+    /* 粉紅色系 UI 元件 */
     .swiper-button-next, .swiper-button-prev { color: #FF80AC !important; transform: scale(0.6); }
     .swiper-pagination-bullet-active { background: #FF80AC !important; }
   </style>
 </head>
 <body>
+
   <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="01.JPG"><div class="char-info"><div class="char-name">Ryokura 01</div><div class="char-detail">泳裝</div></div></div>
-      <div class="swiper-slide"><img src="02.PNG"><div class="char-info"><div class="char-name">Ryokura 02</div><div class="char-detail">蜜集大蛇-初始套裝</div></div></div>
-      <div class="swiper-slide"><img src="03.PNG"><div class="char-info"><div class="char-name">Ryokura 03</div><div class="char-detail">初始套裝</div></div></div>
-      <div class="swiper-slide"><img src="04.PNG"><div class="char-info"><div class="char-name">Ryokura 04</div><div class="char-detail">伊布便服</div></div></div>
-      <div class="swiper-slide"><img src="05.PNG"><div class="char-info"><div class="char-name">Ryokura 05</div><div class="char-detail">表演服</div></div></div>
-      <div class="swiper-slide"><img src="06.PNG"><div class="char-info"><div class="char-name">Ryokura 06</div><div class="char-detail">巨鍛匠-便服</div></div></div>
-      <div class="swiper-slide"><img src="07.PNG"><div class="char-info"><div class="char-name">Ryokura 07</div><div class="char-detail">和風-和服</div></div></div>
-      <div class="swiper-slide"><img src="08.PNG"><div class="char-info"><div class="char-name">Ryokura 08</div><div class="char-detail">七夕青鳥-超進化服裝</div></div></div>
-      <div class="swiper-slide"><img src="09.PNG"><div class="char-info"><div class="char-name">Ryokura 09</div><div class="char-detail">ZA便服</div></div></div>
-      <div class="swiper-slide"><img src="10.PNG"><div class="char-info"><div class="char-name">Ryokura 10</div><div class="char-detail">伽勒爾烈焰馬-冬裝</div></div></div>
+    <div class="swiper-wrapper gallery">
+      
+      <div class="swiper-slide">
+        <a href="01.JPG"><img src="01.JPG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 01</div><div class="char-detail">泳裝</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="02.PNG"><img src="02.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 02</div><div class="char-detail">蜜集大蛇-初始套裝</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="03.PNG"><img src="03.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 03</div><div class="char-detail">初始套裝</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="04.PNG"><img src="04.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 04</div><div class="char-detail">伊布便服</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="05.PNG"><img src="05.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 05</div><div class="char-detail">表演服</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="06.PNG"><img src="06.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 06</div><div class="char-detail">巨鍛匠-便服</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="07.PNG"><img src="07.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 07</div><div class="char-detail">和風-和服</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="08.PNG"><img src="08.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 08</div><div class="char-detail">七夕青鳥-超進化服裝</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="09.PNG"><img src="09.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 09</div><div class="char-detail">ZA便服</div></div>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="10.PNG"><img src="10.PNG"></a>
+        <div class="char-info"><div class="char-name">緑蘿リョクラ 10</div><div class="char-detail">伽勒爾烈焰馬-冬裝</div></div>
+      </div>
+
     </div>
+    
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+  
   <script>
-    const swiper = new Swiper('.swiper', { 
-      loop: true, 
-      pagination: { el: '.swiper-pagination', clickable: true }, 
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } 
+    // 初始化自動輪播 (3秒換一張)
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+
+    // 初始化點擊放大
+    window.addEventListener('load', function() {
+      baguetteBox.run('.gallery', { animation: 'fadeIn', noScrollbars: true });
     });
   </script>
 </body>
