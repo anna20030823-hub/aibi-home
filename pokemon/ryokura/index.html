@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body { background: transparent; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: "Microsoft JhengHei", sans-serif; }
+    .swiper { width: 320px; height: 500px; border-radius: 20px; background: #ffffff; box-shadow: 0 10px 25px rgba(255, 128, 172, 0.2); }
+    .swiper-slide img { width: 100%; height: 70%; object-fit: contain; background: #FF80AC; border-radius: 20px 20px 0 0; }
+    .char-info { padding: 15px; height: 30%; background: #fff; border-radius: 0 0 20px 20px; }
+    .char-name { font-size: 1.2rem; font-weight: bold; color: #FF80AC; margin-bottom: 5px; }
+    .char-detail { font-size: 0.85rem; color: #666; line-height: 1.4; }
+    .swiper-button-next, .swiper-button-prev { color: #FF80AC !important; transform: scale(0.6); }
+    .swiper-pagination-bullet-active { background: #FF80AC !important; }
+  </style>
+</head>
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="1.png"><div class="char-info"><div class="char-name">Ryokura 01</div><div class="char-detail">服裝設定：11月專屬造型</div></div></div>
+      <div class="swiper-slide"><img src="2.png"><div class="char-info"><div class="char-name">Ryokura 02</div><div class="char-detail">服裝設定：粉色系戰鬥服</div></div></div>
+      <div class="swiper-slide"><img src="3.png"><div class="char-info"><div class="char-name">Ryokura 03</div><div class="char-detail">服裝設定：慶典禮服</div></div></div>
+      <div class="swiper-slide"><img src="4.png"><div class="char-info"><div class="char-name">Ryokura 04</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="5.png"><div class="char-info"><div class="char-name">Ryokura 05</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="6.png"><div class="char-info"><div class="char-name">Ryokura 06</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="7.png"><div class="char-info"><div class="char-name">Ryokura 07</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="8.png"><div class="char-info"><div class="char-name">Ryokura 08</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="9.png"><div class="char-info"><div class="char-name">Ryokura 09</div><div class="char-detail">說明文字可自行修改</div></div></div>
+      <div class="swiper-slide"><img src="10.png"><div class="char-info"><div class="char-name">Ryokura 10</div><div class="char-detail">說明文字可自行修改</div></div></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', { 
+      loop: true, 
+      pagination: { el: '.swiper-pagination', clickable: true }, 
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } 
+    });
+  </script>
+</body>
+</html>
