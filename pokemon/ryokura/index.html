@@ -3,45 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryokura Showcase</title>
+  <title>Ryokura Showcase - 9:16 Edition</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
   
   <style>
+    /* 全域設定 */
     body { background: transparent; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: "Microsoft JhengHei", sans-serif; }
     
-    /* 調整比例：與你截圖中的大尺寸一致 */
+    /* 調整比例：精準 9:16 等比縮放 */
     .swiper { 
-      width: 1080px; 
-      height: 1920px; 
-      border-radius: 20px; 
+      width: 336px; /* 根據 2233px 等比縮放 */
+      height: 600px; /* 根據 4000px 等比縮放 */
+      border-radius: 24px; 
       background: #ffffff; 
-      box-shadow: 0 12px 30px rgba(255, 128, 172, 0.25); 
+      box-shadow: 0 15px 35px rgba(242, 194, 212, 0.4); 
+      overflow: hidden;
     }
     
     .swiper-slide { position: relative; cursor: zoom-in; }
     
-    /* 圖片區域：背景為 #FF80AC 粉紅色 */
+    /* 圖片區域：改用低飽和背景色 #F2C2D4 */
     .swiper-slide img { 
       width: 100%; 
-      height: 75%; 
+      height: 78%; /* 稍微拉高圖片比例 */
       object-fit: contain; 
-      background: #FF80AC; 
-      border-radius: 20px 20px 0 0; 
+      background: #F2C2D4; /* 換成更柔和的低飽和粉 */
       display: block; 
     }
     
     /* 角色資訊區 */
-    .char-info { padding: 20px; height: 25%; background: #fff; border-radius: 0 0 20px 20px; box-sizing: border-box; }
-    .char-name { font-size: 1.25rem; font-weight: bold; color: #FF80AC; margin-bottom: 6px; }
-    .char-detail { font-size: 0.95rem; color: #555; line-height: 1.5; }
+    .char-info { 
+      padding: 15px 20px; 
+      height: 22%; 
+      background: #fff; 
+      box-sizing: border-box; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .char-name { font-size: 1.2rem; font-weight: bold; color: #D98BA9; margin-bottom: 4px; }
+    .char-detail { font-size: 0.9rem; color: #777; line-height: 1.4; }
 
-    /* UI 元件：統一為粉紅色 */
-    .swiper-button-next, .swiper-button-prev { color: #FF80AC !important; transform: scale(0.6); }
-    .swiper-pagination-bullet-active { background: #FF80AC !important; }
+    /* UI 元件：使用一致的低飽和深粉色 */
+    .swiper-button-next, .swiper-button-prev { color: #D98BA9 !important; transform: scale(0.5); }
+    .swiper-pagination-bullet { background: #ccc; opacity: 0.5; }
+    .swiper-pagination-bullet-active { background: #D98BA9 !important; opacity: 1; }
     
-    /* 修正 Lightbox 背景顏色 */
-    #baguetteBox-overlay { background-color: rgba(0, 0, 0, 0.9) !important; }
+    /* Lightbox 遮罩 */
+    #baguetteBox-overlay { background-color: rgba(0, 0, 0, 0.85) !important; }
   </style>
 </head>
 <body>
@@ -110,23 +120,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
   
   <script>
-    // 初始化 Swiper：設定自動輪播 (3.5秒) 與循環模式
     const swiper = new Swiper('.swiper', {
       loop: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
+      autoplay: { delay: 3500, disableOnInteraction: false },
       pagination: { el: '.swiper-pagination', clickable: true },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     });
 
-    // 初始化點擊放大效果
     window.addEventListener('load', function() {
-      baguetteBox.run('.gallery', {
-        animation: 'slideIn',
-        noScrollbars: true
-      });
+      baguetteBox.run('.gallery', { animation: 'slideIn', noScrollbars: true });
     });
   </script>
 </body>
